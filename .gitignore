@@ -1,0 +1,8 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+lab09-2024-lpo23-37/
+progetto2024-lpo23-37/
