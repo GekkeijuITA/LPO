@@ -3,6 +3,34 @@
 \usepackage{tikz, tikz-qtree}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \title{Java}
 \author{}
@@ -32,4 +60,16 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
     \item \texttt{int[] $\nleq$ Object[]}
     \item \texttt{int[] $\nleq$ long[]}
 \end{itemize}
+\section{Esercizio dei Tipi (tips)}
+\begin{itemize}
+    \item Se la richiesta ha tipo dinamico (\texttt{P p2 = h}) allora facciamo "l'intersezione" delle funzioni di P e H e diamo la precedenza alle funzioni di H
+    \item Ci potrebbero essere 2 tentativi a runtime quando gli passiamo un oggetto, il primo tentativo è quello che cerca la funzione con firma che possa contenere l'oggetto o dell'oggetto stesso, il secondo tentativo è quello che fa con l'unboxing.
+\end{itemize}
+\section{Tips}
+\begin{lstlisting}[language=Java]
+    public Costruttore(Tipo... arg) {
+        // Codice
+    }
+\end{lstlisting}
+Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
 \end{document}
