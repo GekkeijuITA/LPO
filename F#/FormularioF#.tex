@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+\lstdefinelanguage{FSharp}%
+  {morekeywords={let, in, rec, function, fun, type, member, match, with, try, begin, end, new, null, val, mutable, return, yield, do, use, if, then, else, elif, for, while, to, downto, match, with, open, module, namespace, struct, interface, inherit, abstract, override, as, of, when, failwith},%
+   sensitive=true,%
+   morecomment=[l][\color{gray}]{///},%
+   morecomment=[l][\color{gray}]{//},%
+   morecomment=[s][\color{gray}]{(*}{*)},%
+   morestring=[b]",%
+   morestring=[b]',%
+   morestring=[b]""",%
+   morestring=[b]'''%
+  }[keywords,comments,strings]%
+
+\lstset{ %
+  language=FSharp, 
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\bfseries\color{blue}, 
+  stringstyle=\color{red}, 
+  commentstyle=\color{gray}\itshape, 
+  breaklines=true, 
+  columns=fullflexible, 
+  keepspaces=true, 
+  showspaces=false, 
+  showstringspaces=false
+}
+
+\geometry{margin=2cm}
+\let\olditemize\itemize
+\renewcommand\itemize{\olditemize\setlength\itemsep{0em}}
+
+
+
+\title{Formulario F\#}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Funzioni}
+\begin{lstlisting}[language=FSharp]
+    let nomeFunzione arg1 arg2 = <corpo funzione>
+    let rec nomeFunzioneRicorsiva arg1 arg2 = <corpo funzione>
+    fun arg1 arg2 -> <corpo funzione> // funzione anonima
+\end{lstlisting}
+\section{Liste}
+\begin{itemize}
+    \item [1;2;3] $\rightarrow$ head::tail, head = 1, tail = [2;3]
+    \item Usiamo @ per appendere una \textbf{lista} in coda ad un'altra, usiamo :: per concatenare un \textbf{elemento} in testa ad una lista
+\end{itemize}
+\section{Pattern Matching}
+\begin{lstlisting}[language=FSharp]
+    match x with
+    | 1 -> "Uno"
+    | 2 -> "Due"
+    | _ -> "Altro"
+\end{lstlisting}
+Si può usare il \texttt{when} per aggiungere condizioni
+\begin{lstlisting}[language=FSharp]
+    match x with
+    | x when x > 0 -> "Positivo"
+    | x when x < 0 -> "Negativo"
+    | _ -> "Zero"
+\end{lstlisting}
+\section{Eccezioni}
+\subsection{Per lanciarle}
+\begin{lstlisting}[language=FSharp]
+    [altro codice] failwith "Messaggio di errore"
+\end{lstlisting}
+\subsection{Per gestirle}
+\begin{lstlisting}[language=FSharp]
+    try
+        [codice che potrebbe lanciare eccezioni]
+    with
+        | e -> printfn "Errore: %s" e.Message
+\end{lstlisting}
+\section{Tipi}
+\begin{lstlisting}[language=FSharp]
+    type nomeTipo = | Costruttore1 [of tipo1 * tipo2 * ...] | ...
+\end{lstlisting}
+\section{Esempi di funzioni ricorsive e con accumulatore}
+\subsection*{Accoppiamento elemento indice}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Pairwise.fs}
+\subsection*{Somma elemento per elemento}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/SumWise.fs}
+\subsection*{Selezione elementi in base a condizione}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Select.fs}
+\subsection*{Unione di liste applicando funzione f}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Fuse.fs}
+\subsection*{Somma elementi lista (due elementi alla volta)}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Agg.fs}
+\subsection*{Duplicazione elementi lista}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Dup.fs}
+\end{document}

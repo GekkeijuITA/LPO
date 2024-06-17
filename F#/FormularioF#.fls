@@ -1,0 +1,122 @@
+PWD d:\Università\LPO\F#
+INPUT C:\Users\Lollo\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\Università\LPO\F#\FormularioF#.tex
+OUTPUT FormularioF#.log
+INPUT D:\Programmi\miktex\tex\latex\base\article.cls
+INPUT D:\Programmi\miktex\tex\latex\base\article.cls
+INPUT D:\Programmi\miktex\tex\latex\base\size12.clo
+INPUT D:\Programmi\miktex\tex\latex\base\size12.clo
+INPUT D:\Programmi\miktex\tex\latex\base\size12.clo
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr12.tfm
+INPUT D:\Programmi\miktex\tex\latex\listings\listings.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\listings.sty
+INPUT D:\Programmi\miktex\tex\latex\graphics\keyval.sty
+INPUT D:\Programmi\miktex\tex\latex\graphics\keyval.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstpatch.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstpatch.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstpatch.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstmisc.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstmisc.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\lstmisc.sty
+INPUT D:\Programmi\miktex\tex\latex\listings\listings.cfg
+INPUT D:\Programmi\miktex\tex\latex\listings\listings.cfg
+INPUT D:\Programmi\miktex\tex\latex\listings\listings.cfg
+INPUT D:\Programmi\miktex\tex\generic\babel\babel.sty
+INPUT D:\Programmi\miktex\tex\generic\babel\babel.sty
+INPUT D:\Programmi\miktex\tex\generic\babel\txtbabel.def
+INPUT D:\Programmi\miktex\tex\latex\arabi\bblopts.cfg
+INPUT D:\Programmi\miktex\tex\latex\arabi\bblopts.cfg
+INPUT D:\Programmi\miktex\tex\latex\arabi\bblopts.cfg
+INPUT D:\Programmi\miktex\tex\latex\babel-italian\italian.ldf
+INPUT D:\Programmi\miktex\tex\latex\babel-italian\italian.ldf
+INPUT D:\Programmi\miktex\tex\latex\babel-italian\italian.ldf
+INPUT D:\Programmi\miktex\tex\generic\babel\locale\it\babel-italian.tex
+INPUT D:\Programmi\miktex\tex\generic\babel\locale\it\babel-italian.tex
+INPUT D:\Programmi\miktex\tex\generic\babel\locale\it\babel-italian.tex
+INPUT D:\Programmi\miktex\tex\generic\babel\locale\it\babel-it.ini
+INPUT D:\Programmi\miktex\tex\latex\etoolbox\etoolbox.sty
+INPUT D:\Programmi\miktex\tex\latex\etoolbox\etoolbox.sty
+INPUT D:\Programmi\miktex\tex\latex\geometry\geometry.sty
+INPUT D:\Programmi\miktex\tex\latex\geometry\geometry.sty
+INPUT D:\Programmi\miktex\tex\generic\iftex\ifvtex.sty
+INPUT D:\Programmi\miktex\tex\generic\iftex\ifvtex.sty
+INPUT D:\Programmi\miktex\tex\generic\iftex\iftex.sty
+INPUT D:\Programmi\miktex\tex\generic\iftex\iftex.sty
+INPUT D:\Programmi\miktex\tex\latex\geometry\geometry.cfg
+INPUT D:\Programmi\miktex\tex\latex\geometry\geometry.cfg
+INPUT D:\Programmi\miktex\tex\latex\geometry\geometry.cfg
+INPUT D:\Programmi\miktex\tex\latex\xcolor\xcolor.sty
+INPUT D:\Programmi\miktex\tex\latex\xcolor\xcolor.sty
+INPUT D:\Programmi\miktex\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Programmi\miktex\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Programmi\miktex\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Programmi\miktex\tex\latex\graphics-def\pdftex.def
+INPUT D:\Programmi\miktex\tex\latex\graphics-def\pdftex.def
+INPUT D:\Programmi\miktex\tex\latex\graphics-def\pdftex.def
+INPUT D:\Programmi\miktex\tex\latex\graphics\mathcolor.ltx
+INPUT D:\Programmi\miktex\tex\latex\graphics\mathcolor.ltx
+INPUT D:\Programmi\miktex\tex\latex\graphics\mathcolor.ltx
+INPUT D:\Programmi\miktex\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Programmi\miktex\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\FormularioF#.aux
+INPUT .\FormularioF#.aux
+INPUT FormularioF#.aux
+OUTPUT FormularioF#.aux
+INPUT D:\Programmi\miktex\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Programmi\miktex\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Programmi\miktex\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmtt12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmtt10.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr8.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr6.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmmi8.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmmi6.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmsy8.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmsy6.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\Programmi\miktex\fonts\tfm\public\cm\cmr10.tfm
+OUTPUT FormularioF#.pdf
+INPUT C:\Users\Lollo\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\Soluzioni FS\Pairwise.fs
+INPUT .\Soluzioni FS\Pairwise.fs
+INPUT Soluzioni FS\Pairwise.fs
+INPUT .\Soluzioni FS\SumWise.fs
+INPUT .\Soluzioni FS\SumWise.fs
+INPUT Soluzioni FS\SumWise.fs
+INPUT .\Soluzioni FS\Select.fs
+INPUT .\Soluzioni FS\Select.fs
+INPUT Soluzioni FS\Select.fs
+INPUT .\Soluzioni FS\Fuse.fs
+INPUT .\Soluzioni FS\Fuse.fs
+INPUT Soluzioni FS\Fuse.fs
+INPUT .\Soluzioni FS\Agg.fs
+INPUT .\Soluzioni FS\Agg.fs
+INPUT Soluzioni FS\Agg.fs
+INPUT .\Soluzioni FS\Dup.fs
+INPUT .\Soluzioni FS\Dup.fs
+INPUT Soluzioni FS\Dup.fs
+INPUT FormularioF#.aux
+INPUT C:\Users\Lollo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Lollo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT D:\Programmi\miktex\fonts\type1\public\amsfonts\cm\cmtt12.pfb

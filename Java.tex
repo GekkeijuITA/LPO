@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[italian]{babel}
+\usepackage{tikz, tikz-qtree}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Java}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\Tree [ .double [ .float [ .long [ .int [ .short [ byte ] ] char ] ] ] ]\\
+\Tree [ .Object [ [ .Number Byte Short Integer Long Float Double ] Character Boolean ] ]
+\section{Regole}
+$T_{1} \text{ e } T_{2}$ sono due tipi:
+\begin{itemize}
+    \item $T_{1}\leq T_{2}\Rightarrow T_{1}[]\leq T_{2}[] \leq Object$
+    \item $T$ primitivo: $T[]\leq Object$ e l'unico array compatibile con $T[]$ è sè stesso
+\end{itemize}
+\textbf{Esempi:}
+\begin{itemize}
+    \item \texttt{String[] $\leq$ Object[] $\leq$ Object}
+    \item \texttt{Integer[] $\leq$ Number[] $\leq$ Object}
+    \item \texttt{Integer[] $\nleq$ Long[]}
+    \item \texttt{int[] $\leq$ Object}
+    \item \texttt{int[] $\nleq$ Integer[]}
+    \item \texttt{int[] $\nleq$ Object[]}
+    \item \texttt{int[] $\nleq$ long[]}
+\end{itemize}
+\end{document}
