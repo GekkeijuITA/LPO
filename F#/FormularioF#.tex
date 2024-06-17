@@ -11,7 +11,7 @@
    morecomment=[l][\color{gray}]{//},%
    morecomment=[s][\color{gray}]{(*}{*)},%
    morestring=[b]",%
-   morestring=[b]',%
+   %morestring=[b]',%
    morestring=[b]""",%
    morestring=[b]'''%
   }[keywords,comments,strings]%
@@ -85,6 +85,7 @@ Si può usare il \texttt{when} per aggiungere condizioni
 \section{Esempi di funzioni ricorsive e con accumulatore}
 \subsection*{Accoppiamento elemento indice}
     \lstinputlisting[language=FSharp]{Soluzioni FS/Pairwise.fs}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Indexed.fs}
 \subsection*{Somma elemento per elemento}
     \lstinputlisting[language=FSharp]{Soluzioni FS/SumWise.fs}
 \subsection*{Selezione elementi in base a condizione}
@@ -99,4 +100,14 @@ Si può usare il \texttt{when} per aggiungere condizioni
     \lstinputlisting[language=FSharp]{Soluzioni FS/Remove.fs}
 \subsection*{Inserisci in posizione i (con e senza eccezione)}
     \lstinputlisting[language=FSharp]{Soluzioni FS/Insert.fs}
+\subsection*{Applica una funzione f agli elementi di due liste}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Map2.fs}    
+\subsection*{Pairwise}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/PairwiseList.fs} 
+\subsection*{Lista di lunghezza i con stesso elemento el}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Repl.fs} 
+\subsection*{Prodotto scalare}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/Scalar.fs}     
+\subsection*{Somma elementi lista con applicazione di una funzione a tutti gli elementi}
+    \lstinputlisting[language=FSharp]{Soluzioni FS/SumBy.fs}    
 \end{document}
