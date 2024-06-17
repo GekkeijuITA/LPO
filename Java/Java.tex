@@ -10,8 +10,12 @@
 
 \begin{document}
 \maketitle
-\Tree [ .double [ .float [ .long [ .int [ .short [ byte ] ] char ] ] ] ]\\
-\Tree [ .Object [ [ .Number Byte Short Integer Long Float Double ] Character Boolean ] ]
+\begin{tikzpicture}
+    \Tree [ .double [ .float [ .long [ .int [ .short [ byte ] ] char ] ] ] ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \Tree [ .Object [ [ .Number Byte Short Integer Long Float Double ] Character Boolean ] ]  
+\end{tikzpicture}
 \section{Regole}
 $T_{1} \text{ e } T_{2}$ sono due tipi:
 \begin{itemize}
