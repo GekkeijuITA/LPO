@@ -62,7 +62,7 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
 \end{itemize}
 \section{Esercizio dei Tipi (tips)}
 \begin{itemize}
-    \item Se la richiesta ha tipo dinamico (\texttt{P p2 = h}) allora facciamo "l'intersezione" delle funzioni di P e H e diamo la precedenza alle funzioni di H
+    \item Se la richiesta ha tipo dinamico (\texttt{P p2 = h}) allora guardiamo le funzioni della classe 'statica' (P) e le funzioni che ha in comune con la classe dinamica (H) verranno sovrascritte dalla classe dinamica.
     \item Ci potrebbero essere 2 tentativi a runtime quando gli passiamo un oggetto, il primo tentativo è quello che cerca la funzione con firma che possa contenere l'oggetto o dell'oggetto stesso, il secondo tentativo è quello che fa con l'unboxing.
 \end{itemize}
 \section{Tips}

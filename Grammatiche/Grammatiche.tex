@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tikz,tikz-qtree}
+
+\title{Grammatiche}
+\author{}
+\date{}
+
+\geometry{margin=2cm}
+\let\olditemize\itemize
+\renewcommand\itemize{\olditemize\setlength\itemsep{0em}}
+
+\begin{document}
+\maketitle
+\section{Associatività}
+\begin{itemize}
+    \item \textbf{Associatività sinistra}: la grammatica è ricorsiva a sinistra (es. $Exp::= Exp|Atom$)
+    \item \textbf{Associatività destra}: la grammatica è ricorsiva a destra (es. $Exp::= Atom|Exp$)
+\end{itemize}
+\section{Ambiguità}
+Una grammatica ambigua se per un'espressione $E$ esistono \textbf{almeno} due alberi diversi.
+Come facciamo a ristrutturare la grammatica in modo da renderla non ambigua?\\
+Un modo sarebbe quello di usare la notazione postfissa e prefissa, altrimenti si rende la grammatica ricorsiva a sinistra o a destra oppure si aggiungono dei livelli alla grammatica. Di solito quelli che danno problemi sono le operazioni che non sono ricorsive (nella grammatica) oppure i livelli inferiori che chiamano quelli superiori.
+\section{Esempio da esame}
+Exp ::= Exp + Atom $|$ Exp * Exp $|$ Atom\\
+Atom ::= a $|$ b $|$ (Exp)\\
+E' ambigua per l'espressione $a*b*a$.
+\begin{center}
+    \begin{tikzpicture}
+        \Tree [.Exp [.Exp [.Exp [.Atom a ] ] * [.Exp [.Atom b ] ] ] * [.Exp [.Atom a ] ] ]
+    \end{tikzpicture}
+    \begin{tikzpicture}
+        \Tree [.Exp [.Exp [.Atom a ] ] * [.Exp [.Exp [.Exp [.Atom b ] ] * [.Exp [.Atom a ] ] ] ] ]
+    \end{tikzpicture}
+\end{center}
+Per renderla non ambigua basta modificare la produzione per  l'operatore * forzando, per esempio, l'associatività a sinistra:\\
+Exp ::= Exp + Atom $|$ Exp * Atom $|$ Atom\\
+Atom ::= a $|$ b $|$ (Exp)
+\end{document}
