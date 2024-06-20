@@ -61,12 +61,12 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
 \begin{itemize}
     \item \textbf{Boxing}: è il processo di conversione di un tipo primitivo nella classe oggetto wrapper corrispondente (es. \texttt{int} in \texttt{Integer})
     \item \textbf{Unboxing}: è il processo contrario del boxing, ovvero la conversione di un oggetto wrapper in un tipo primitivo (es. \texttt{Integer} in \texttt{int})
-    \item \textbf{Autoboxing}: è il processo automatico di boxing di un tipo primitivo in un oggetto wrapper
 \end{itemize}
 \section{Esercizio dei Tipi (tips)}
 \begin{itemize}
     \item Se la richiesta ha tipo dinamico (\texttt{P p2 = h}) allora guardiamo le funzioni della classe 'statica' (P) e le funzioni che ha in comune con la classe dinamica (H) verranno sovrascritte dalla classe dinamica.
     \item Ci potrebbero essere 2 tentativi a runtime quando gli passiamo un oggetto, il primo tentativo è quello che cerca la funzione con firma che possa contenere l'oggetto o dell'oggetto stesso, il secondo tentativo è quello che fa con l'unboxing. 
+    \item Se la richiesta ha tipo H che estende P allora guardiamo le funzioni di H e quelle di P dove quelle di H fanno override di quelle di P.
 \end{itemize}
 \section{Tips}
 \begin{lstlisting}[language=Java]
@@ -74,7 +74,7 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
         // Codice
     }
 \end{lstlisting}
-Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
+Quando ci sono i puntini, possiamo passare un numero variabile di argomenti. \texttt{arg} è considerato come array.
 \section{Esercizi di Visitatori Liste}
         \subsubsection{VisitorTest.java}
             \lstinputlisting[language=Java]{VisitorExam/List/VisitorTest.java}
