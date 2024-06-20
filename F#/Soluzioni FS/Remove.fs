@@ -25,3 +25,4 @@ let removeAcc l i =
         match i,l with
         | 0, _ :: tl -> acc @ tl
         | _, hd :: tl -> loop tl (i - 1) (hd :: acc)
+    loop l i []
