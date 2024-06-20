@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+\title{Espressioni regolari}
+\author{}
+\date{}
+
+\geometry{margin=2cm}
+\let\olditemize\itemize
+\renewcommand\itemize{\olditemize\setlength\itemsep{0em}}
+
+\begin{document}
+\maketitle
+\section{Costruzione di una regex}
+\begin{itemize}
+    \item \textbf{/./}: qualsiasi carattere (le / sono solo delimitatori, non fanno parte della regex)
+    \item \textbf{[range]}: qualsiasi carattere tra le parentesi
+    \item \textbf{[\textasciicircum range]}: qualsiasi carattere che non è tra le parentesi
+    \item \textbf{\textasciicircum[range]}: i caratteri del range devono essere all'inizio della stringa
+    \item \textbf{[range]\$}: i caratteri del range devono essere alla fine della stringa
+    \item \textbf{[range1][range2]}: i caratteri del range1 devono essere seguiti dai caratteri del range2
+    \item \textbf{[range1]$|$[range2]}: i caratteri del range1 o del range2
+    \item \textbf{(regex)}: gruppo di regex
+    \item \textbf{(?:regex)}: gruppo di regex non catturante, non influisce sul riconoscimento dei gruppi
+\end{itemize}
+\section{Quantificatori}
+\begin{itemize}
+    \item \textbf{x+}: x presente una o più volte
+    \item \textbf{x*}: x presente zero o più volte
+    \item \textbf{x?}: x presente zero o una volta
+    \item \textbf{x\{n\}}: x presente esattamente n volte
+    \item \textbf{x\{n,\}}: x presente almeno n volte
+    \item \textbf{x\{n,m\}}: x presente da n a m volte
+\end{itemize}
+\section{Caratteri speciali}
+\begin{itemize}
+    \item \textbf{\textbackslash t}: carattere tab
+    \item \textbf{\textbackslash n}: carattere newline
+    \item \textbf{\textbackslash s}: qualsiasi carattere di spazio (tab, newline, spazio, ecc.)
+    \item \textbf{\textbackslash S}: qualsiasi carattere che non sia di spazio (equivalente a \textbf{[ \textasciicircum\textbackslash s]})
+    \item \textbf{\textbackslash d}: qualsiasi cifra (equivalente a \textbf{[0-9]})
+    \item \textbf{\textbackslash D}: qualsiasi carattere che non sia una cifra (equivalente a \textbf{[ \textasciicircum0-9]})
+    \item \textbf{\textbackslash w}: qualsiasi carattere alfanumerico (equivalente a \textbf{[a-zA-Z0-9\_]})
+    \item \textbf{\textbackslash W}: qualsiasi carattere che non sia alfanumerico (equivalente a \textbf{[ \textasciicircum \textbackslash w]})
+\end{itemize}
+\section{Esempi}
+\subsection{Targhe automobilistiche italiane}
+[A-Z]\{2\}\textbackslash d\{3\}[A-Z]\{2\}\\
+Spiegazione: vuole due lettere, tre cifre e due lettere
+\subsection{Numeri in base 16}
+0[xX][\textbackslash dA-Fa-f]+\\
+Spiegazione: lo 0 deve essere all'inizio, seguito da x o X, seguito da una o più cifre o lettere da A a F
+\subsection{Esercizio da esame}
+\textit{Stabillire a quale gruppo appartengono le stringhe}\\
+(\textbackslash \{[\textasciicircum\textbackslash]*\textbackslash\})$|$(\textbackslash d\textbackslash d/\textbackslash d\textbackslash d)$|$(\textbackslash w+(\textbackslash.\textbackslash w+)*)\\
+Spiegazione:
+\begin{itemize}
+    \item Il primo gruppo accetta stringhe che iniziano con \{ e finiscono con \}, in mezzo possono esserci da 0 a infiniti caratteri che non siano \}
+    \item Il secondo gruppo accetta due cifre, uno / e altre due cifre
+    \item Il terzo gruppo accetta una o più caratteri alfanumerici, seguite da zero o più gruppi di un punto e una o più caratteri alfanumerici
+\end{itemize}
+\begin{itemize}
+    \item " a.": non appartiene a nessun gruppo, quello più vicino è il terzo ma come primo carattere non può esserci uno spazio
+    \item "\_a.\_": appartiene al terzo gruppo
+    \item "12/02": appartiene al secondo gruppo
+    \item "12/3": non appartiene a nessun gruppo, quello più vicino è il secondo ma dopo \textbackslash ci vogliono due cifre
+    \item "\{\}": appartiene al primo gruppo
+    \item "\{,\}": appartiene al primo gruppo
+\end{itemize}
+\end{document}
