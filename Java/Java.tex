@@ -27,7 +27,6 @@
     showtabs=false,                  
     tabsize=2
 }
-
 \lstset{style=mystyle}
 
 \title{Java}
@@ -40,7 +39,7 @@
     \Tree [ .double [ .float [ .long [ .int [ .short [ byte ] ] char ] ] ] ]
 \end{tikzpicture}
 \begin{tikzpicture}
-    \Tree [ .Object [ [ .Number Byte Short Integer Long Float Double ] Character Boolean ] ]  
+    \Tree [ .Object [ [ .Number Byte Short Integer Long Float Double ] Character Boolean Array String ] ]  
 \end{tikzpicture}
 \section{Regole}
 $T_{1} \text{ e } T_{2}$ sono due tipi:
@@ -58,10 +57,16 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
     \item \texttt{int[] $\nleq$ Object[]}
     \item \texttt{int[] $\nleq$ long[]}
 \end{itemize}
+\section{Definizioni}
+\begin{itemize}
+    \item \textbf{Boxing}: è il processo di conversione di un tipo primitivo nella classe oggetto wrapper corrispondente (es. \texttt{int} in \texttt{Integer})
+    \item \textbf{Unboxing}: è il processo contrario del boxing, ovvero la conversione di un oggetto wrapper in un tipo primitivo (es. \texttt{Integer} in \texttt{int})
+    \item \textbf{Autoboxing}: è il processo automatico di boxing di un tipo primitivo in un oggetto wrapper
+\end{itemize}
 \section{Esercizio dei Tipi (tips)}
 \begin{itemize}
     \item Se la richiesta ha tipo dinamico (\texttt{P p2 = h}) allora guardiamo le funzioni della classe 'statica' (P) e le funzioni che ha in comune con la classe dinamica (H) verranno sovrascritte dalla classe dinamica.
-    \item Ci potrebbero essere 2 tentativi a runtime quando gli passiamo un oggetto, il primo tentativo è quello che cerca la funzione con firma che possa contenere l'oggetto o dell'oggetto stesso, il secondo tentativo è quello che fa con l'unboxing.
+    \item Ci potrebbero essere 2 tentativi a runtime quando gli passiamo un oggetto, il primo tentativo è quello che cerca la funzione con firma che possa contenere l'oggetto o dell'oggetto stesso, il secondo tentativo è quello che fa con l'unboxing. 
 \end{itemize}
 \section{Tips}
 \begin{lstlisting}[language=Java]
@@ -70,9 +75,7 @@ $T_{1} \text{ e } T_{2}$ sono due tipi:
     }
 \end{lstlisting}
 Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
-
-\section{Esercizi di Visitatori}
-        \subsection{Liste}
+\section{Esercizi di Visitatori Liste}
         \subsubsection{VisitorTest.java}
             \lstinputlisting[language=Java]{VisitorExam/List/VisitorTest.java}
         \subsubsection{ListCons.java}
@@ -81,8 +84,7 @@ Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
             \lstinputlisting[language=Java]{VisitorExam/List/EmptyList.java}
         \subsubsection{Length.java}
             \lstinputlisting[language=Java]{VisitorExam/List/Length.java}
-        
-        \subsection{Classi}
+\section{Esercizi di Visitatori Classi}
         \subsubsection{VisitorTest.java}
             \lstinputlisting[language=Java]{VisitorExam/Class/VisitorTest.java}
         \subsubsection{ClassEntity.java}
@@ -91,9 +93,7 @@ Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
             \lstinputlisting[language=Java]{VisitorExam/Class/InstanceEntity.java}
         \subsubsection{SuperClassOf.java}
             \lstinputlisting[language=Java]{VisitorExam/Class/SuperClassOf.java}
-
 \section{Esercizi di Iteratori}
-    
         \subsection{Liste}
             \subsubsection{Test.java}
                 \lstinputlisting[language=Java]{IteratorExam/Pow/Test.java}
@@ -105,5 +105,4 @@ Quando ci sono i puntini, possiamo passare un numero variabile di argomenti.
                 \lstinputlisting[language=Java]{IteratorExam/StringArray/IteratorTest.java}
             \subsubsection{StringArrayRevIterator.java}
                 \lstinputlisting[language=Java]{IteratorExam/StringArray/StringArrayRevIterator.java}
-
 \end{document}

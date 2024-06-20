@@ -1,5 +1,4 @@
 package exam2024_01_23.visitor;
-
 public class VisitorTest {
 	public static void main(String[] args) {
 		var l1 = new EmptyList(); // la lista []

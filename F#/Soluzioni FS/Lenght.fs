@@ -9,3 +9,4 @@ let lenAcc list =
         | [] -> acc
         | head::tail -> 1+ (loop tail acc)
     loop list 0
+    

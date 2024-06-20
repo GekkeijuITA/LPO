@@ -1,11 +1,11 @@
-let sumBy f =
-    let rec aux = function
-        | hd::tl -> f hd + aux tl
-        | [] -> 0
-    aux
+let rec sumBy f l=
+    match l with
+    | hd::tl -> f hd + sumBy tl
+    | _ -> 0
 
-let accSumBy f =
-    let rec aux acc = function
+let accSumBy f l=
+    let rec aux acc l=
+        match l with
         | hd::tl -> aux (f hd + acc) tl
-        | [] -> acc
-    aux 0
+        | _ -> acc
+    aux 0 l
