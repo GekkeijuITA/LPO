@@ -39,4 +39,15 @@ E' ambigua per l'espressione $a*b*a$.
 Per renderla non ambigua basta modificare la produzione per  l'operatore * forzando, per esempio, l'associatività a sinistra:\\
 Exp ::= Exp + Atom $|$ Exp * Atom $|$ Atom\\
 Atom ::= a $|$ b $|$ (Exp)
+
+\newpage 
+\section{ Come riconoscere le grammatiche ambigue}
+
+Una grammatica ambigua può essere riconosciuta se non rispetta le seguenti regole:
+
+\begin{itemize}
+    \item Se il livello chiama se stesso o il livello sopra è ambiguo
+    \item Se non è associativa da destra o da sinistra in un livello è quasi sicuramente ambigua ( e non ci sono le parentesi es. Exp * Exp)
+\end{itemize}
 \end{document}
+
